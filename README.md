@@ -3,6 +3,14 @@ boxfuse-sample-java-springboot-hello
 
 Boxfuse Sample Hello World Java application packaged as a Spring Boot executable jar file
 
+## Prerequisites
+
+- Git
+- Maven
+- VirtualBox
+- Boxfuse
+
+
 ## Running
 
 1. git clone https://github.com/boxfuse/boxfuse-sample-java-springboot-hello
