@@ -6,6 +6,7 @@ Boxfuse Sample Hello World Java application packaged as a Spring Boot executable
 ## Prerequisites
 
 - Git
+- Java
 - Maven
 - VirtualBox
 - Boxfuse
