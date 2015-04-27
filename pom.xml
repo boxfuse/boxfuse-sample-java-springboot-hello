@@ -11,17 +11,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.1.8.RELEASE</version>
+        <version>1.2.3.RELEASE</version>
     </parent>
 
     <pluginRepositories>
         <pluginRepository>
             <id>boxfuse-repo</id>
-            <url>http://download.boxfuse.com</url>
+            <url>https://files.boxfuse.com</url>
         </pluginRepository>
         <pluginRepository>
             <id>central</id>
-            <url>http://repo1.maven.org/maven2/</url>
+            <url>https://repo1.maven.org/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -59,7 +59,7 @@
             <plugin>
                 <groupId>com.boxfuse.client</groupId>
                 <artifactId>boxfuse-maven-plugin</artifactId>
-                <version>0.9.429</version>
+                <version>1.3.2.576</version>
                 <configuration>
                     <!-- Replace with your user and secret located under Client Credentials in the Boxfuse Dashboard -->
                     <!--
