@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        mavenLocal();
+        mavenCentral();
+        maven { url 'http://files.boxfuse.com' }
+    }
+    dependencies {
+        classpath "com.boxfuse.client:boxfuse-gradle-plugin:1.8.8.670"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+}
+
+apply plugin: 'boxfuse'
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+repositories {
+        mavenLocal();
+        mavenCentral();
+        maven { url 'http://files.boxfuse.com' }
+}
+    
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("junit:junit")
+    testCompile "net.sourceforge.htmlunit:htmlunit:2.16"
+}
+
+boxfuse {
+    // Replace with your user and secret located under Client Credentials in the Boxfuse Console
+    // user='...'
+    // secret='...'
+    app='hello'
+}
