@@ -5,7 +5,7 @@ buildscript {
         maven { url 'http://files.boxfuse.com' }
     }
     dependencies {
-        classpath "com.boxfuse.client:boxfuse-gradle-plugin:1.8.8.670"
+        classpath "com.boxfuse.client:boxfuse-gradle-plugin:1.8.9.673"
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
     }
 }
