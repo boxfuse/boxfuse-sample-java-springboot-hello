@@ -23,3 +23,5 @@ Boxfuse Sample Hello World Java application packaged as a Spring Boot executable
 Done!
 
 Open your browser at http://localhost:8888 to see your brand new instance in action!
+
+More info about Boxfuse and how to deploy effortlessly to AWS using immutable minimal images: https://boxfuse.com
