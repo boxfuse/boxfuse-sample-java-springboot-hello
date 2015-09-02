@@ -1,0 +1,8 @@
+language: java
+jdk: oraclejdk8
+script: mvn package
+deploy:
+  provider: boxfuse
+  payload: target/hello.war
+  version: $TRAVIS_BUILD_NUMBER
+after_deploy: boxfuse/boxfuse kill hello -env=test
