@@ -9,6 +9,7 @@ deploy:
   payload: target/hello.jar
   app: hello
   version: $TRAVIS_BUILD_NUMBER
+  env: test
   user: $BOXFUSE_USER
   secret: $BOXFUSE_SECRET
 after_deploy: boxfuse/boxfuse kill hello -env=test
