@@ -4,10 +4,10 @@ before_install: echo Ready...
 install: echo Set...
 before_script: echo Go!
 script: mvn package
-env:
-  - secure: "S8QOuYMKOVnVTC/sEGX0HQMKy0gNrbOics0zX1sb/RvBKYiwt6ZFJWsQ4/CgmgG1Qgs34wr7jcZROtdLCmryFB9BEQ5MmJVHnIb+UGqkH6ppoLsGxW0R7k1SGncTL3+5OoG217ZdgCbDZ+ryaOBhAg/Q6b2b2oo31TUcAlTvAG0="
 deploy:
   provider: boxfuse
   payload: target/hello.war
   version: $TRAVIS_BUILD_NUMBER
+  user: $BOXFUSE_USER
+  secret: $BOXFUSE_SECRET
 after_deploy: boxfuse/boxfuse kill hello -env=test
