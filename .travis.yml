@@ -3,10 +3,10 @@ jdk: oraclejdk8
 before_install: echo Ready...
 install: echo Set...
 before_script: echo Go!
-script: mvn install
+script: mvn package
 deploy:
   provider: boxfuse
-  payload: target/hello.war
+  payload: target/hello.jar
   app: hello
   version: $TRAVIS_BUILD_NUMBER
   user: $BOXFUSE_USER
