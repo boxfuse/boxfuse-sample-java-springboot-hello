@@ -1,5 +1,6 @@
 boxfuse-sample-java-springboot-hello
 ====================================
+[![Build Status](https://travis-ci.org/boxfuse/boxfuse-sample-java-springboot-hello.svg?branch=master)](https://travis-ci.org/boxfuse/boxfuse-sample-java-springboot-hello)
 
 Boxfuse Sample Hello World Java application packaged as a Spring Boot executable jar file
 
