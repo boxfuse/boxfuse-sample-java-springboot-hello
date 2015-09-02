@@ -2,7 +2,7 @@ language: java
 jdk: oraclejdk8
 before_install: echo Ready...
 install: echo Set...
-before_script: echo Go!
+before_script: echo Go! ($TRAVIS_BUILD_NUMBER)
 script: mvn package
 deploy:
   provider: boxfuse
@@ -12,4 +12,4 @@ deploy:
   env: test
   user: $BOXFUSE_USER
   secret: $BOXFUSE_SECRET
-after_deploy: boxfuse/boxfuse kill hello -env=test
+after_deploy: boxfuse/boxfuse kill hello -env=test -user=$BOXFUSE_USER -secret=$BOXFUSE_SECRET
