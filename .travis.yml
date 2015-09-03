@@ -7,6 +7,7 @@ script: mvn package
 deploy:
   provider: boxfuse
   payload: target/hello.jar
+  env: test
   app: hello
   image: hello:$TRAVIS_BUILD_NUMBER
 after_deploy: boxfuse/boxfuse kill hello -env=test && boxfuse/boxfuse rm hello -vault
