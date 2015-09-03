@@ -6,8 +6,8 @@ before_script: echo Go!
 script: mvn package
 deploy:
   provider: boxfuse
-  app: hello
+  app: "hello$TRAVIS_BUILD_NUMBER"
   env: test
   payload: target/hello.jar
   image: hello:$TRAVIS_BUILD_NUMBER
-after_deploy: boxfuse/boxfuse kill hello -env=test  && boxfuse/boxfuse rm hello -vault
+after_deploy: boxfuse/boxfuse kill hello$TRAVIS_BUILD_NUMBER -env=test  && boxfuse/boxfuse rm hello$TRAVIS_BUILD_NUMBER -vault
