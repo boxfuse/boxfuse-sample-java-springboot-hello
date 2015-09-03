@@ -8,7 +8,7 @@ deploy:
   provider: boxfuse
   edge:
     source: axelfontaine/dpl
-    branch: master
+    branch: foo
   payload: target/hello.jar
   image: hello:$TRAVIS_BUILD_NUMBER
   user: $BOXFUSE_USER
