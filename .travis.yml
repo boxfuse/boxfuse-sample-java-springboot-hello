@@ -6,10 +6,11 @@ before_script: echo Go! $TRAVIS_BUILD_ID -> $TRAVIS_BUILD_NUMBER
 script: mvn package
 deploy:
   provider: boxfuse
+  edge:
+    source: axelfontaine/dpl
+    branch: master
   payload: target/hello.jar
-  app: hello
-  version: $TRAVIS_BUILD_NUMBER
-  env: test
+  image: hello:$TRAVIS_BUILD_NUMBER
   user: $BOXFUSE_USER
   secret: $BOXFUSE_SECRET
 after_deploy: boxfuse/boxfuse kill hello -env=test -user=$BOXFUSE_USER -secret=$BOXFUSE_SECRET
